@@ -1,0 +1,38 @@
+<h1>Edit User</h1>
+<form class="row g-3 mt-2" method="POST" action="/user/<%= userData.id %>/update?_method=PUT">
+    <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" value="<%= userData.email%>">
+    </div>
+    <div class="col-6">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="" placeholder="" name="firstName" value="<%= userData.firstName%>">
+    </div>
+    <div class="col-6">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="" placeholder="" name="lastName" value="<%= userData.lastName%>">
+    </div>
+    <div class="col-12">
+        <label for="address" class="form-label">Address</label>
+        <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St" value="<%= userData.address%>">
+    </div>
+    <div class="col-md-6">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" value="<%= userData.phoneNumber%>">
+    </div>
+    <div class="col-md-3">
+        <label for="gender" class="form-label">Sex</label>
+        <select id="gender" class="form-select" name="gender">
+            <option selected>Choose...</option>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+    </div>
+    <div class= "d-none">
+        <label for="">Id</label>
+        <input type="text" name="id" value="<%= userData.id%>" disabled>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+</form>
