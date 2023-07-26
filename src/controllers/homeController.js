@@ -1,5 +1,5 @@
 import db from '../models/index';
-import CRUDService from '../services/CRUD-service';
+import CRUDService from '../services/CRUDService';
 
 class homeController {
 
