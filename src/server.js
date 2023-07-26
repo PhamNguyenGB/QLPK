@@ -6,8 +6,15 @@ import viewEngine from "./config/viewEngine";
 import initWebRoutes from "./route/web";
 import connectDb from "./config/connectDB";
 import methodOverride from "method-override";
+import cors from "cors";
 
 let app = express();
+// app.use(cors({ origin: true}));
+
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true,
+}));
 
 // config app
 app.use(bodyParser.json());

@@ -9,7 +9,7 @@ class userController {
             res.status(500).json({
                 errCode: 1,
                 message: 'Login failed',
-            })
+            });
         }
 
         let userData = await userService.handleLogin(email, password);
