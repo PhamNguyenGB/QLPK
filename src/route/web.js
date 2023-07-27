@@ -13,7 +13,12 @@ let initWebRoutes = (app) => {
     router.put('/user/:id/update', homeController.updateUser);
     router.get('/user/:id/delete', homeController.deleteUser);
 
+    // API routes 
     router.post('/api/login', userController.handleLogin);
+    router.get('/api/get-users', userController.handleGetUsers);
+    router.post('/api/create-new-user', userController.handleCreateNewUser);
+    router.put('/api/edit-user', userController.handleEditUser);
+    router.delete('/api/delete-user', userController.handleDeleteUser);
 
     router.get('/', homeController.index);
 
